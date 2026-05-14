@@ -1,0 +1,23 @@
+{
+  "libro": 6,
+  "titulo": "Las obligaciones",
+  "rango": {
+    "desde": 1132,
+    "hasta": 1350
+  },
+  "keywords": [
+    "obligaciones",
+    "pago",
+    "novación",
+    "compensación",
+    "prescripción"
+  ],
+  "carpeta": "codigo_civil/libro_vi/",
+  "total_articulos": 219,
+  "vigentes": 210,
+  "modificados": 8,
+  "derogados": 1,
+  "ultima_actualizacion": "2025-01-08",
+  "fuente_oficial": "https://lpderecho.pe/codigo-civil-peruano-realmente-actualizado/",
+  "fuente_base": "LP Derecho — actualizado Ley 32228"
+}

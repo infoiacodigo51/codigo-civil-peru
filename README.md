@@ -1,0 +1,215 @@
+# Código Civil Peruano — Estructurado para IA
+
+> Repositorio mantenido por [CÓDIGO51](https://codigo51.com) — Consultoría de IA para LATAM
+
+Código Civil peruano (D.Leg. 295) estructurado artículo por artículo en formato Markdown,
+diseñado para ser consumido por sistemas MCP, RAG y agentes de IA legal.
+
+**Actualizado a:** Ley 32228 — 08 de enero de 2025
+
+---
+
+## ¿Para qué sirve este repositorio?
+
+Permite conectar Claude (u otro LLM) directamente a la legislación civil peruana vigente
+mediante un servidor MCP. El agente puede buscar, leer y citar artículos específicos
+en tiempo real durante un análisis legal.
+
+**Caso de uso típico:**
+> Un abogado en Claude Desktop pregunta sobre derechos sucesorios.
+> El plugin `claude-for-legal` llama al MCP server de este repositorio,
+> que devuelve los artículos 660–880 con su estado de vigencia actualizado.
+
+---
+
+## Estructura
+
+```
+codigo-civil-peru/
+├── README.md
+├── server.py                  # MCP server (FastMCP / Python)
+├── titulo_preliminar/         # Art. I – X
+├── libro_i/                   # Art.   1 –   139  Derecho de las personas
+├── libro_ii/                  # Art. 140 –   232  Acto jurídico
+├── libro_iii/                 # Art. 233 –   659  Derecho de familia
+├── libro_iv/                  # Art. 660 –   880  Derecho de sucesiones
+├── libro_v/                   # Art. 881 – 1,131  Derechos reales
+├── libro_vi/                  # Art. 1132 – 1,350  Las obligaciones
+├── libro_vii/                 # Art. 1351 – 1,988  Fuentes de las obligaciones
+├── libro_viii/                # Art. 1989 – 2,007  Prescripción y caducidad
+├── libro_ix/                  # Art. 2008 – 2,045  Registros públicos
+└── libro_x/                   # Art. 2046 – 2,122  Derecho internacional privado
+```
+
+### Cada artículo es un fichero `.md` con frontmatter YAML:
+
+```yaml
+---
+id:              "CC-L4-724"
+libro_num:       4
+libro_nombre:    "Derecho de sucesiones"
+articulo:        "724"
+sumilla:         "Herederos forzosos"
+status:          "modificado"
+version:         2
+fuente_original: "D.Leg. 295 (DOEP 25-07-1984)"
+fuente_texto:    "LP Derecho — actualizado Ley 32228 (08-01-2025)"
+fecha_vigencia:  "1984-11-14"
+modificaciones:
+  - tipo:  "modificado"
+    norma: "Ley 30007"
+    fecha: "17 de abril de 2013"
+tags: []
+---
+
+## Art. 724 — Herederos forzosos
+
+Son herederos forzosos los hijos y los demás descendientes...
+```
+
+---
+
+## Estados de un artículo
+
+| Status | Significado |
+|---|---|
+| `vigente` | Texto aplicable actualmente |
+| `modificado` | Texto vigente ya incorporado — historial en `modificaciones[]` |
+| `derogado` | Sin efecto legal — el MCP server emite advertencia automática |
+| `incorporado` | Artículo nuevo añadido por ley posterior al texto original |
+
+---
+
+## MCP Server — instalación rápida
+
+### Requisitos
+- Python 3.10+
+- `pip install fastmcp`
+
+### Clonar y arrancar
+
+```bash
+git clone https://github.com/infoiacodigo51/codigo-civil-peru.git
+cd codigo-civil-peru
+pip install fastmcp
+python server.py
+```
+
+### Modo SSE para VPS
+
+```bash
+python server.py --transport sse --port 8001
+```
+
+### Configuración en Claude Desktop (`claude_desktop_config.json`)
+
+```json
+{
+  "mcpServers": {
+    "legislacion-civil-peru": {
+      "command": "python",
+      "args": ["/ruta/a/codigo-civil-peru/server.py"],
+      "env": {
+        "LEGAL_DATA_DIR": "/ruta/a/codigo-civil-peru"
+      }
+    }
+  }
+}
+```
+
+### Conexión a VPS remoto
+
+```json
+{
+  "mcpServers": {
+    "legislacion-civil-peru": {
+      "type": "sse",
+      "url": "https://tu-servidor.com/legal-mcp/sse"
+    }
+  }
+}
+```
+
+---
+
+## Tools disponibles
+
+### `search_legislation(query, libro?, solo_vigentes?, limite?)`
+Busca artículos por materia o texto libre.
+```
+search_legislation("herederos forzosos")
+→ 32 artículos del Libro IV
+```
+
+### `get_article(articulo)`
+Texto completo + estado de vigencia.
+```
+get_article("724")
+→ Art. 724 con advertencia: "modificado por Ley 30007"
+```
+
+### `update_article(articulo, nuevo_texto, norma, fecha, tipo?)`
+Actualiza un artículo cuando cambia la ley.
+```
+update_article("724", "nuevo texto...", "Ley 32500", "15-06-2025")
+```
+
+---
+
+## Índice de materias
+
+| Materia | Libro | Artículos |
+|---|---|---|
+| Personas, capacidad, domicilio | I | 1 – 139 |
+| Acto jurídico, nulidad, representación | II | 140 – 232 |
+| Familia, matrimonio, divorcio, alimentos | III | 233 – 659 |
+| Sucesiones, herencia, testamento, legítima | IV | 660 – 880 |
+| Propiedad, posesión, usufructo, hipoteca | V | 881 – 1,131 |
+| Obligaciones, pago, novación, extinción | VI | 1,132 – 1,350 |
+| Contratos, compraventa, resp. extracontractual | VII | 1,351 – 1,988 |
+| Prescripción y caducidad | VIII | 1,989 – 2,007 |
+| Registros públicos | IX | 2,008 – 2,045 |
+| Derecho internacional privado | X | 2,046 – 2,122 |
+
+---
+
+## Política de actualizaciones
+
+- Solo se hacen **commits** — nunca se reescribe el historial
+- Cada commit referencia la norma que motiva el cambio
+- Los artículos derogados se conservan con `status: derogado` — nunca se borran
+- Versiones etiquetadas por año: `v2025.01`, `v2025.06`...
+
+---
+
+## Cobertura actual
+
+| | |
+|---|---|
+| Total artículos | 2,089 |
+| Vigentes | 1,850 |
+| Modificados | 188 |
+| Derogados | 34 |
+| Incorporados | 17 |
+| Última ley incorporada | Ley 32228 (08-01-2025) |
+
+---
+
+## Próximos repositorios
+
+- `codigo-penal-peru` — Código Penal (D.Leg. 635)
+- `codigo-procesal-civil-peru` — CPC (D.Leg. 768)
+- `codigo-procesal-penal-peru` — NCPP (D.Leg. 957)
+
+---
+
+## Créditos y mantenimiento
+
+Desarrollado y mantenido por **[CÓDIGO51](https://codigo51.com)**
+Consultoría de Inteligencia Artificial para América Latina
+
+- Web: [codigo51.com](https://codigo51.com)
+- LinkedIn: [CÓDIGO51](https://linkedin.com/company/codigo51)
+
+> Este repositorio es de libre uso. Si lo usas en tu bufete o proyecto,
+> una mención a CÓDIGO51 es bienvenida.

@@ -1,0 +1,23 @@
+{
+  "libro": 2,
+  "titulo": "Acto jurídico",
+  "rango": {
+    "desde": 140,
+    "hasta": 232
+  },
+  "keywords": [
+    "acto jurídico",
+    "nulidad",
+    "representación",
+    "interpretación",
+    "modalidades"
+  ],
+  "carpeta": "codigo_civil/libro_ii/",
+  "total_articulos": 93,
+  "vigentes": 81,
+  "modificados": 10,
+  "derogados": 2,
+  "ultima_actualizacion": "2025-01-08",
+  "fuente_oficial": "https://lpderecho.pe/codigo-civil-peruano-realmente-actualizado/",
+  "fuente_base": "LP Derecho — actualizado Ley 32228"
+}

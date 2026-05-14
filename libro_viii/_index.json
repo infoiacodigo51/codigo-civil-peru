@@ -1,0 +1,21 @@
+{
+  "libro": 8,
+  "titulo": "Prescripción y caducidad",
+  "rango": {
+    "desde": 1989,
+    "hasta": 2007
+  },
+  "keywords": [
+    "prescripción",
+    "caducidad",
+    "plazos"
+  ],
+  "carpeta": "codigo_civil/libro_viii/",
+  "total_articulos": 19,
+  "vigentes": 17,
+  "modificados": 2,
+  "derogados": 0,
+  "ultima_actualizacion": "2025-01-08",
+  "fuente_oficial": "https://lpderecho.pe/codigo-civil-peruano-realmente-actualizado/",
+  "fuente_base": "LP Derecho — actualizado Ley 32228"
+}

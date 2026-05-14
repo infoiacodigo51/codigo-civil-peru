@@ -1,0 +1,21 @@
+{
+  "libro": 10,
+  "titulo": "Derecho internacional privado",
+  "rango": {
+    "desde": 2046,
+    "hasta": 2122
+  },
+  "keywords": [
+    "derecho internacional",
+    "ley aplicable",
+    "competencia jurisdiccional"
+  ],
+  "carpeta": "codigo_civil/libro_x/",
+  "total_articulos": 77,
+  "vigentes": 74,
+  "modificados": 3,
+  "derogados": 0,
+  "ultima_actualizacion": "2025-01-08",
+  "fuente_oficial": "https://lpderecho.pe/codigo-civil-peruano-realmente-actualizado/",
+  "fuente_base": "LP Derecho — actualizado Ley 32228"
+}

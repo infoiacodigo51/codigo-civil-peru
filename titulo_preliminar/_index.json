@@ -1,0 +1,22 @@
+{
+  "libro": 0,
+  "titulo": "Título Preliminar",
+  "rango": {
+    "desde": null,
+    "hasta": null
+  },
+  "keywords": [
+    "derogación",
+    "analogía",
+    "orden público",
+    "iura novit curia"
+  ],
+  "carpeta": "codigo_civil/titulo_preliminar/",
+  "total_articulos": 10,
+  "vigentes": 9,
+  "modificados": 1,
+  "derogados": 0,
+  "ultima_actualizacion": "2025-01-08",
+  "fuente_oficial": "https://lpderecho.pe/codigo-civil-peruano-realmente-actualizado/",
+  "fuente_base": "LP Derecho — actualizado Ley 32228"
+}

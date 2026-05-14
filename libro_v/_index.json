@@ -1,0 +1,24 @@
+{
+  "libro": 5,
+  "titulo": "Derechos reales",
+  "rango": {
+    "desde": 881,
+    "hasta": 1131
+  },
+  "keywords": [
+    "propiedad",
+    "posesión",
+    "usufructo",
+    "servidumbre",
+    "hipoteca",
+    "bienes"
+  ],
+  "carpeta": "codigo_civil/libro_v/",
+  "total_articulos": 215,
+  "vigentes": 206,
+  "modificados": 8,
+  "derogados": 1,
+  "ultima_actualizacion": "2025-01-08",
+  "fuente_oficial": "https://lpderecho.pe/codigo-civil-peruano-realmente-actualizado/",
+  "fuente_base": "LP Derecho — actualizado Ley 32228"
+}

@@ -1,0 +1,23 @@
+{
+  "libro": 7,
+  "titulo": "Fuentes de las obligaciones",
+  "rango": {
+    "desde": 1351,
+    "hasta": 1988
+  },
+  "keywords": [
+    "contratos",
+    "compraventa",
+    "arrendamiento",
+    "donación",
+    "responsabilidad extracontractual"
+  ],
+  "carpeta": "codigo_civil/libro_vii/",
+  "total_articulos": 621,
+  "vigentes": 599,
+  "modificados": 20,
+  "derogados": 2,
+  "ultima_actualizacion": "2025-01-08",
+  "fuente_oficial": "https://lpderecho.pe/codigo-civil-peruano-realmente-actualizado/",
+  "fuente_base": "LP Derecho — actualizado Ley 32228"
+}

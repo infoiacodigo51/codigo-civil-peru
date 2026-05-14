@@ -1,0 +1,25 @@
+{
+  "libro": 1,
+  "titulo": "Derecho de las personas",
+  "rango": {
+    "desde": 1,
+    "hasta": 139
+  },
+  "keywords": [
+    "personas",
+    "capacidad",
+    "domicilio",
+    "nombre",
+    "ausencia",
+    "muerte",
+    "incapacidad"
+  ],
+  "carpeta": "codigo_civil/libro_i/",
+  "total_articulos": 133,
+  "vigentes": 103,
+  "modificados": 30,
+  "derogados": 0,
+  "ultima_actualizacion": "2025-01-08",
+  "fuente_oficial": "https://lpderecho.pe/codigo-civil-peruano-realmente-actualizado/",
+  "fuente_base": "LP Derecho — actualizado Ley 32228"
+}

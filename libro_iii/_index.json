@@ -1,0 +1,25 @@
+{
+  "libro": 3,
+  "titulo": "Derecho de familia",
+  "rango": {
+    "desde": 233,
+    "hasta": 659
+  },
+  "keywords": [
+    "familia",
+    "matrimonio",
+    "divorcio",
+    "filiación",
+    "alimentos",
+    "tutela",
+    "patria potestad"
+  ],
+  "carpeta": "codigo_civil/libro_iii/",
+  "total_articulos": 426,
+  "vigentes": 336,
+  "modificados": 70,
+  "derogados": 20,
+  "ultima_actualizacion": "2025-01-08",
+  "fuente_oficial": "https://lpderecho.pe/codigo-civil-peruano-realmente-actualizado/",
+  "fuente_base": "LP Derecho — actualizado Ley 32228"
+}

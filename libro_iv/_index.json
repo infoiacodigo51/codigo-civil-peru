@@ -1,0 +1,25 @@
+{
+  "libro": 4,
+  "titulo": "Derecho de sucesiones",
+  "rango": {
+    "desde": 660,
+    "hasta": 880
+  },
+  "keywords": [
+    "sucesiones",
+    "herencia",
+    "testamento",
+    "legado",
+    "herederos",
+    "legítima",
+    "intestada"
+  ],
+  "carpeta": "codigo_civil/libro_iv/",
+  "total_articulos": 221,
+  "vigentes": 195,
+  "modificados": 24,
+  "derogados": 2,
+  "ultima_actualizacion": "2025-01-08",
+  "fuente_oficial": "https://lpderecho.pe/codigo-civil-peruano-realmente-actualizado/",
+  "fuente_base": "LP Derecho — actualizado Ley 32228"
+}
