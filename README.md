@@ -27,7 +27,6 @@ en tiempo real durante un análisis legal.
 ```
 codigo-civil-peru/
 ├── README.md
-├── server.py                  # MCP server (FastMCP / Python)
 ├── titulo_preliminar/         # Art. I – X
 ├── libro_i/                   # Art.   1 –   139  Derecho de las personas
 ├── libro_ii/                  # Art. 140 –   232  Acto jurídico
@@ -80,54 +79,13 @@ Son herederos forzosos los hijos y los demás descendientes...
 
 ---
 
-## MCP Server — instalación rápida
-
-### Requisitos
-- Python 3.10+
-- `pip install fastmcp`
+## Actualizar codigo
 
 ### Clonar y arrancar
 
 ```bash
 git clone https://github.com/infoiacodigo51/codigo-civil-peru.git
 cd codigo-civil-peru
-pip install fastmcp
-python server.py
-```
-
-### Modo SSE para VPS
-
-```bash
-python server.py --transport sse --port 8001
-```
-
-### Configuración en Claude Desktop (`claude_desktop_config.json`)
-
-```json
-{
-  "mcpServers": {
-    "legislacion-civil-peru": {
-      "command": "python",
-      "args": ["/ruta/a/codigo-civil-peru/server.py"],
-      "env": {
-        "LEGAL_DATA_DIR": "/ruta/a/codigo-civil-peru"
-      }
-    }
-  }
-}
-```
-
-### Conexión a VPS remoto
-
-```json
-{
-  "mcpServers": {
-    "legislacion-civil-peru": {
-      "type": "sse",
-      "url": "https://tu-servidor.com/legal-mcp/sse"
-    }
-  }
-}
 ```
 
 ---
