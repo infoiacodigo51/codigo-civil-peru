@@ -161,14 +161,6 @@ update_article("724", "nuevo texto...", "Ley 32500", "15-06-2025")
 
 ---
 
-## Créditos y mantenimiento
-
-Desarrollado y mantenido por **[CÓDIGO51](https://codigo51.com)**
-Consultoría de Inteligencia Artificial para América Latina
-
-- Web: [codigo51.com](https://codigo51.com)
-- LinkedIn: [CÓDIGO51](https://linkedin.com/company/codigo51)
-
 ## Fuente de los datos
 
 El contenido de este repositorio fue extraído y estructurado a partir de
@@ -201,3 +193,16 @@ en el texto de un artículo o un artículo que no está incluido:
 
 Este repositorio es de libre uso. Si lo usas en tu bufete o proyecto,
 una mención a https://codigo51.com es bienvenida.
+
+
+### Plantilla para artículo nuevo
+Usa la plantilla en [`CONTRIBUTING/plantilla_articulo.md`](./CONTRIBUTING/plantilla_articulo.md)
+como base para el fichero `.md` del artículo nuevo.
+
+## Créditos y mantenimiento
+
+Desarrollado y mantenido por **[CÓDIGO51](https://codigo51.com)**
+Consultoría de Inteligencia Artificial para América Latina
+
+- Web: [codigo51.com](https://codigo51.com)
+- LinkedIn: [CÓDIGO51](https://linkedin.com/company/codigo51)
