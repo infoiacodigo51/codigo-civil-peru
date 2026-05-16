@@ -169,5 +169,35 @@ Consultoría de Inteligencia Artificial para América Latina
 - Web: [codigo51.com](https://codigo51.com)
 - LinkedIn: [CÓDIGO51](https://linkedin.com/company/codigo51)
 
-> Este repositorio es de libre uso. Si lo usas en tu bufete o proyecto,
-> una mención a CÓDIGO51 es bienvenida.
+## Fuente de los datos
+
+El contenido de este repositorio fue extraído y estructurado a partir de
+**[LP Derecho (lpderecho.pe)](https://lpderecho.pe)**, portal de referencia
+legal peruano, y validado contra el texto oficial del D.Leg. 295
+(DOEP 25-07-1984), incluyendo las modificaciones hasta la Ley 32228
+(08-01-2025).
+
+> Los datos son de acceso público. Este repositorio los estructura
+> en formato Markdown + YAML para hacerlos consumibles por sistemas MCP y RAG.
+
+## ¿Encontraste un error o falta un artículo?
+
+Este repositorio es mantenido por la comunidad. Si detectas un error
+en el texto de un artículo o un artículo que no está incluido:
+
+### Reportar un error
+1. Ve a la pestaña [Issues](https://github.com/infoiacodigo51/codigo-civil-peru/issues)
+2. Crea un nuevo issue con el título: `[Error] Art. XXX — descripción breve`
+3. Indica el texto incorrecto y la fuente correcta (LP Derecho, El Peruano, etc.)
+
+### Agregar un artículo faltante
+1. Haz fork del repositorio
+2. Crea el fichero `.md` en la carpeta del libro correspondiente
+   siguiendo el formato YAML del frontmatter
+3. Envía un Pull Request con el título: `[Nuevo] Art. XXX — sumilla`
+
+> Cada contribución se revisa antes de hacer merge.
+> La fuente del texto debe ser siempre verificable.
+
+Este repositorio es de libre uso. Si lo usas en tu bufete o proyecto,
+una mención a https://codigo51.com es bienvenida.
