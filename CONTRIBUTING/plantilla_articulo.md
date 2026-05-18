@@ -1,16 +1,17 @@
 ---
-id:              "CC-LX-000"        # Ejemplo: CC-L4-662 (Libro 4, Art. 662)
-libro_num:       0                  # Número del libro (1 al 10)
-libro_nombre:    ""                 # Ejemplo: "Derecho de sucesiones"
-articulo:        "000"              # Número del artículo
-sumilla:         ""                 # Título corto del artículo
-status:          "vigente"          # vigente | modificado | derogado | incorporado
-version:         1
-fuente_original: "D.Leg. 295 (DOEP 25-07-1984)"
-fuente_texto:    "LP Derecho (lpderecho.pe) — actualizado Ley 32228 (08-01-2025)"
-fecha_vigencia:  "AAAA-MM-DD"
-modificaciones:  []                 # Dejar vacío si status es "vigente"
-tags:            []
+id: CC-LX-000
+libro_num: 0
+libro_nombre: ''
+articulo: '000'
+sumilla: ''
+status: vigente
+version: 1
+fuente_original: D.Leg. 295 (DOEP 25-07-1984)
+fuente_texto: SPIJ — Ministerio de Justicia del Perú (spij.minjus.gob.pe) — verificado
+  2026-05-18
+fecha_vigencia: AAAA-MM-DD
+modificaciones: []
+tags: []
 ---
 
 ## Art. 000 — Título del artículo

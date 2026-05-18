@@ -52,7 +52,7 @@ sumilla:         "Herederos forzosos"
 status:          "modificado"
 version:         2
 fuente_original: "D.Leg. 295 (DOEP 25-07-1984)"
-fuente_texto:    "LP Derecho — actualizado Ley 32228 (08-01-2025)"
+fuente_texto:    "SPIJ — verificado Ley 32228 (08-01-2025)"
 fecha_vigencia:  "1984-11-14"
 modificaciones:
   - tipo:  "modificado"
@@ -163,14 +163,14 @@ update_article("724", "nuevo texto...", "Ley 32500", "15-06-2025")
 
 ## Fuente de los datos
 
-El contenido de este repositorio fue extraído y estructurado a partir de
-**[LP Derecho (lpderecho.pe)](https://lpderecho.pe)**, portal de referencia
-legal peruano, y validado contra el texto oficial del D.Leg. 295
-(DOEP 25-07-1984), incluyendo las modificaciones hasta la Ley 32228
-(08-01-2025).
+El contenido de este repositorio fue estructurado a partir del texto oficial del
+**[SPIJ — Sistema Peruano de Información Jurídica](https://spij.minjus.gob.pe)**,
+fuente oficial del Ministerio de Justicia del Perú, validado contra el D.Leg. 295
+(DOEP 25-07-1984) incluyendo las modificaciones hasta la Ley 32228 (08-01-2025).
 
-> Los datos son de acceso público. Este repositorio los estructura
-> en formato Markdown + YAML para hacerlos consumibles por sistemas MCP y RAG.
+> Los datos provienen de una fuente oficial del Estado peruano.
+> Este repositorio los estructura en formato Markdown + YAML
+> para hacerlos consumibles por sistemas MCP y RAG.
 
 ## ¿Encontraste un error o falta un artículo?
 
@@ -180,7 +180,7 @@ en el texto de un artículo o un artículo que no está incluido:
 ### Reportar un error
 1. Ve a la pestaña [Issues](https://github.com/infoiacodigo51/codigo-civil-peru/issues)
 2. Crea un nuevo issue con el título: `[Error] Art. XXX — descripción breve`
-3. Indica el texto incorrecto y la fuente correcta (LP Derecho, El Peruano, etc.)
+3. Indica el texto incorrecto y la fuente correcta (SPIJ, El Peruano, etc.)
 
 ### Agregar un artículo faltante
 1. Haz fork del repositorio
